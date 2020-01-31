@@ -24,7 +24,22 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                          <label for="startUp" class="col-md-4 col-form-label text-md-right">Start up</label>
 
+                            <div class="col-md-6">
+                                <select name="startUp" class="form-control @error('startUp') is-invalid @enderror">
+                                      <option value="">--Please choose an option--</option>
+                                      <option value="lovelace">Lovelace</option>
+                                      <option value="johnson">Johnson</option>
+                                </select>
+                                @error('startUp')
+                                    <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
