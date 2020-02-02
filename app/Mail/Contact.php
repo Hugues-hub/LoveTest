@@ -17,7 +17,7 @@ public $contact;
      *
      * @return void
      */
-    public function __construct(Array $contact)
+    public function __construct($contact)
     {
         $this->contact = $contact;
     }

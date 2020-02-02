@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\Mail\Contact;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
@@ -15,9 +15,17 @@ class ContactController extends Controller
 
       public function store(ContactRequest $request)
       {
-        Mail::to('7d912e6196-31d225@inbox.mailtrap.io')
-        ->send(new Contact($request->except('_token')));
-          return view('confirm');
+        Mail::to('admin@test.com')->send(new Contact($request));
+        return view('confirm');
       }
 
+
+
 }
+
+
+// $this->validate($request,[
+//     'nom' => 'required|',
+//     'email' => 'required|email',
+//     'message' => 'bail|required|max:250'
+// ]);
