@@ -22,10 +22,3 @@ class ContactController extends Controller
 
 
 }
-
-
-// $this->validate($request,[
-//     'nom' => 'required|',
-//     'email' => 'required|email',
-//     'message' => 'bail|required|max:250'
-// ]);
