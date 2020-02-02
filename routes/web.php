@@ -19,3 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/photo', 'LoveSonController@photo')->middleware('auth')->name('photo');
+
+
+Route::get('/contact', 'ContactController@create')->middleware('auth')->name('contact');
+Route::post('/contact', 'ContactController@store')->name('confirm');

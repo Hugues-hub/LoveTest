@@ -37,6 +37,7 @@
                     <ul class="navbar-nav mr-auto">
                       <a class="nav-link" href="{{ route('home') }}">Dashboard</a>
                       <a class="nav-link" href="{{ route('photo') }}">Photos</a>
+                      <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
