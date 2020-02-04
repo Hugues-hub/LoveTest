@@ -29,7 +29,7 @@ class Contact extends Mailable
      */
     public function build()
     {
-        dd($this->contact);
+
         return $this->from('test@test.com')
         ->view('message');
     }
