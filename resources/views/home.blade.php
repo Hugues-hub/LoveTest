@@ -16,7 +16,7 @@
 
                   <p>Welcome {{$name}} , You are logged in!</p>
                   <p>You are a member of {{$startUp}}</p>
-                  <p>The Lovelace's members are</p>
+                  <p>The {{$startUp}}'s members are</p>
                   @foreach($users as $user)
                     <ul>
                       <li>{{ $user->name }}</li>
