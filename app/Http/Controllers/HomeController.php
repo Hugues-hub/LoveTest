@@ -28,10 +28,13 @@ class HomeController extends Controller
         $startUp = Auth::user()->start_up;
         $users = User::where('start_up', $startUp)->get();
         $name = Auth::user()->name;
-        return view('home', [
-          'name' => $name,
-          'users' => $users,
-          'startUp' => $startUp
-        ]);
+        return view(
+            'home',
+            [
+            'name' => $name,
+            'users' => $users,
+            'startUp' => $startUp
+            ]
+        );
     }
 }

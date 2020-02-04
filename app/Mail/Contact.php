@@ -11,7 +11,7 @@ class Contact extends Mailable
 {
     use Queueable, SerializesModels;
 
-public $contact;
+    public $contact;
     /**
      * Create a new message instance.
      *
@@ -29,9 +29,8 @@ public $contact;
      */
     public function build()
     {
+        dd($this->contact);
         return $this->from('test@test.com')
         ->view('message');
     }
-
-
 }

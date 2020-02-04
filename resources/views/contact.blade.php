@@ -18,11 +18,11 @@
                       @csrf
                       <div class="form-group">
                         <label for="nom">Nom</label>
-                        <input type="text" class="form-control" @error('nom') is-invalid @enderror name="nom" id="nom" placeholder="votre nom" value="{{ old('nom') }}">
+                        <input type="text" class="form-control" @error('nom') is-invalid @enderror name="nom" id="nom" placeholder="votre nom" value="{{ $user->name }}">
                       </div>
                     <div class="form-group">
                       <label for="email">Email</label>
-                      <input type="email" class="form-control" @error('email') is-invalid @enderror name="email" id="email" placeholder="votre email" value="{{ old('email') }}">
+                      <input type="email" class="form-control" @error('email') is-invalid @enderror name="email" id="email" placeholder="votre email" value="{{ $user->email }}">
                     </div>
 
                     <div class="form-group">
