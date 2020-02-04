@@ -18,7 +18,14 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        Mail::to('admin@test.com')->send(new Contact($request->message));
+        $request->validate([
+            'nom' => 'required',
+            'email' => 'required|email',
+            'message' => 'required|max:255'
+        ]);
+        Mail::to('admin@test.com')->send(
+            new Contact(['nom' => $request->nom, 'email' => $request->email, 'message' => $request->message])
+        );
         return view('confirm');
     }
 }
